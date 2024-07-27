@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+{% endblock %}
+{% block content %}
+
+<section class="page-header">
+  <h1>Workouts List</h1>
+</section>
+
+<section class="card-container">
+  {% for workout in workouts %}
+    <div class="card">
+      {% comment %} <a href="{% url 'workout-detail' workout.id %}"> {% endcomment %}
+        <div class="card-content">
+          <div class="card-img-container">
+          </div>
+          <h2 class="card-title">{{ workout.split }}</h2>
+          <p><small>test</small></p>
+        </div>
+      {% comment %} </a> {% endcomment %}
+    </div>
+  {% endfor %}
+</section>
+
+
+{% endblock %}
